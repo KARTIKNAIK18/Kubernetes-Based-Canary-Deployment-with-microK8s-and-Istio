@@ -1,0 +1,49 @@
+
+.pomodoro-bg {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.pomodoro-container {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 16px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.15);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  max-width: 350px;
+}
+
+.timer-display {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 1.5rem 0;
+  letter-spacing: 2px;
+}
+
+.timer-controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.timer-controls button {
+  background: #646cff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.timer-controls button:disabled {
+  background: #b3b3b3;
+  cursor: not-allowed;
+}
+.timer-controls button:not(:disabled):hover {
+  background: #4b52c7;
+}

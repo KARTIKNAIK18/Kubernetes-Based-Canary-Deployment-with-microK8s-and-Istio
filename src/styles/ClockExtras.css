@@ -1,0 +1,39 @@
+/* This file contains additional styles to customize the clock appearance */
+
+/* Additional classes for the clock face enhancement */
+.clock-outer-ring {
+  position: absolute;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  border: 2px solid #1a1a1a;
+  border-radius: 50%;
+  top: 4px;
+  left: 4px;
+  z-index: 0;
+}
+
+/* For the quarter-hour markers */
+.clock-quarter-mark {
+  position: absolute;
+  background-color: #1a1a1a;
+  width: 4px;
+  height: 15px;
+  left: 50%;
+  margin-left: -2px;
+  top: 10px;
+  transform-origin: 50% 115px;
+}
+
+/* For the hour markers */
+.clock-hour-mark {
+  position: absolute;
+  background-color: #1a1a1a;
+  width: 3px;
+  height: 10px;
+  left: 50%;
+  margin-left: -1.5px;
+  top: 10px;
+  transform-origin: 50% 115px;
+}
+
+
