@@ -1,12 +1,5 @@
 
-<<<<<<< HEAD
-import './styles/App.css';
-import Header from './components/Header';
-import Timer from './components/Timer';
-import Footer from './components/Footer';
 
-function App() {
-=======
 import { useState } from 'react';
 import './styles/App.css';
 import Header from './components/Header';
@@ -27,18 +20,14 @@ function App() {
     }
   };
 
->>>>>>> dev
+
   return (
     <div className="app-container">
       <div className="content-grid">
         <div className="main-content">
-<<<<<<< HEAD
-          <Header />
-          <Timer />
-=======
+
           <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
           {renderCurrentPage()}
->>>>>>> dev
           <div className="decorative-element"></div>
           <Footer />
         </div>

@@ -2,10 +2,14 @@
 .header {
   text-align: center;
   padding: 1.5rem 1rem 1rem;
-<<<<<<< HEAD
-=======
   width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee;
+  background: white;
+  position: relative;
+  z-index: 10;  
 }
+
 
 .header-content {
   display: flex;
@@ -51,7 +55,7 @@
 .title-section {
   flex: 2;
   text-align: center;
->>>>>>> dev
+
 }
 
 .main-title {
@@ -70,10 +74,10 @@
   letter-spacing: 0.2rem;
   color: #505050;
   text-transform: uppercase;
-<<<<<<< HEAD
+
   margin: 0.5rem 0 1.5rem;
-=======
-  margin: 0.5rem 0 0;
+
+ 
 }
 
 .user-section {
@@ -138,17 +142,15 @@
 .logout-btn:hover {
   background: #505050;
   color: white;
->>>>>>> dev
 }
 
 .decorative-line {
   width: 60px;
   height: 2px;
   background-color: #1a1a1a;
-<<<<<<< HEAD
+
   margin: 0 auto;
-=======
-  margin: 1.5rem auto 0;
+
 }
 
 /* Modal Styles */
@@ -315,5 +317,5 @@
     font-size: 2.5rem;
     letter-spacing: 0.3rem;
   }
->>>>>>> dev
+
 }

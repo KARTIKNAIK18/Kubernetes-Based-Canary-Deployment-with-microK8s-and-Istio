@@ -35,11 +35,6 @@ const Timer = () => {
   const [currentTask, setCurrentTask] = useState('');
   const [showTaskInput, setShowTaskInput] = useState(false);
   const [quote, setQuote] = useState('');
-<<<<<<< HEAD
-  const intervalRef = useRef(null);
-  const audioRef = useRef(null);
-  
-=======
   const [user, setUser] = useState(null);
   const intervalRef = useRef(null);
   const audioRef = useRef(null);
@@ -81,7 +76,7 @@ const Timer = () => {
     }
   };
   
->>>>>>> dev
+
   // Array of motivational quotes
   const quotes = [
     "Focus on being productive instead of busy.",
@@ -106,9 +101,7 @@ const Timer = () => {
 
   // Handle timer completion
   useEffect(() => {
-<<<<<<< HEAD
-    if (secondsLeft === 0 && !isRunning) {
-=======
+
     if (secondsLeft === 0 && !isRunning && sessionStartTime) {
       // Track the completed session
       const endTime = new Date();
@@ -126,7 +119,6 @@ const Timer = () => {
         interruptions: 0 // Could track this if needed
       });
 
->>>>>>> dev
       // Play sound notification if enabled
       if (settings.enableSounds && audioRef.current) {
         audioRef.current.play().catch(err => console.log('Audio play failed:', err));
@@ -144,18 +136,13 @@ const Timer = () => {
       } else {
         showNotification('Back to work!', 'POMODORO');
       }
-<<<<<<< HEAD
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [secondsLeft, isRunning]);
-=======
+
 
       // Reset session start time
       setSessionStartTime(null);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [secondsLeft, isRunning, sessionStartTime]);
->>>>>>> dev
 
   // Set page title to show current timer
   useEffect(() => {
@@ -202,15 +189,12 @@ const Timer = () => {
   const startTimer = () => {
     if (!isRunning) {
       setIsRunning(true);
-<<<<<<< HEAD
-=======
       
       // Set session start time for tracking
       if (!sessionStartTime) {
         setSessionStartTime(new Date());
       }
       
->>>>>>> dev
       intervalRef.current = setInterval(() => {
         setSecondsLeft((prev) => {
           const newValue = prev > 0 ? prev - 1 : 0;
@@ -244,8 +228,7 @@ const Timer = () => {
   };
 
   const resetTimer = () => {
-<<<<<<< HEAD
-=======
+
     // Track incomplete session if there was a session in progress
     if (sessionStartTime) {
       const endTime = new Date();
@@ -266,7 +249,7 @@ const Timer = () => {
       setSessionStartTime(null);
     }
 
->>>>>>> dev
+
     setIsRunning(false);
     clearInterval(intervalRef.current);
     const resetValue = settings.timers[timerMode] * 60;
