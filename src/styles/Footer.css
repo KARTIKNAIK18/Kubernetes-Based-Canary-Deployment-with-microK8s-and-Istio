@@ -1,0 +1,23 @@
+/* Footer.css */
+.footer {
+  padding: 1.5rem 1rem;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footer-text {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #1a1a1a;
+  max-width: 500px;
+  margin: 0 auto 0.5rem;
+  line-height: 1.6;
+}
+
+.footer-author {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  color: #505050;
+  letter-spacing: 0.1rem;
+}

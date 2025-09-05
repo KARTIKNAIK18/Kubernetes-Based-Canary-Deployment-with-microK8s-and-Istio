@@ -1,0 +1,391 @@
+/* Analytics.css */
+.analytics-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.analytics-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.analytics-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.analytics-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.period-selector {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.period-selector button {
+  background: none;
+  border: 1px solid #ddd;
+  color: #505050;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.period-selector button:hover {
+  border-color: #1a1a1a;
+  color: #1a1a1a;
+}
+
+.period-selector button.active {
+  background: #1a1a1a;
+  color: white;
+  border-color: #1a1a1a;
+}
+
+/* Statistics Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.stat-card {
+  background: white;
+  border: 1px solid #eee;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.stat-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #505050;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin: 0 0 0.5rem;
+}
+
+.stat-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1;
+}
+
+.stat-value.score {
+  color: #28a745;
+}
+
+.stat-value .unit {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #505050;
+  margin-left: 0.2rem;
+}
+
+/* Detailed Stats */
+.detailed-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.stat-section {
+  background: white;
+  border: 1px solid #eee;
+  padding: 1.5rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.stat-section h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin: 0 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f8f9fa;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+}
+
+.stat-row:last-child {
+  border-bottom: none;
+}
+
+.stat-row span:first-child {
+  color: #505050;
+}
+
+.stat-row span:last-child {
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+/* Trends Chart */
+.trends-chart {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  height: 120px;
+  padding: 1rem 0;
+}
+
+.trend-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.trend-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  color: #505050;
+  text-transform: uppercase;
+}
+
+.trend-visual {
+  width: 20px;
+  height: 80px;
+  background: #f8f9fa;
+  border-radius: 2px;
+  position: relative;
+  display: flex;
+  align-items: end;
+}
+
+.trend-fill {
+  width: 100%;
+  background: linear-gradient(to top, #1a1a1a, #505050);
+  border-radius: 2px;
+  min-height: 2px;
+  transition: height 0.3s ease;
+}
+
+.trend-value {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+/* Recent Sessions */
+.recent-sessions {
+  background: white;
+  border: 1px solid #eee;
+  padding: 1.5rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.recent-sessions h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin: 0 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.sessions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.session-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #f8f9fa;
+  border-radius: 2px;
+  transition: background 0.3s ease;
+}
+
+.session-item:hover {
+  background: #f8f9fa;
+}
+
+.session-type {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  text-transform: capitalize;
+  min-width: 120px;
+}
+
+.session-details {
+  flex: 1;
+}
+
+.session-task {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  color: #1a1a1a;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+
+.session-info {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  color: #505050;
+}
+
+/* Export Section */
+.export-section {
+  background: white;
+  border: 1px solid #eee;
+  padding: 1.5rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.export-section h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin: 0 0 1rem;
+}
+
+.export-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.export-btn {
+  background: #1a1a1a;
+  color: white;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: background 0.3s ease;
+}
+
+.export-btn:hover {
+  background: #333;
+}
+
+/* Loading and Empty States */
+.loading {
+  text-align: center;
+  padding: 3rem;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #f8f9fa;
+  border-top: 3px solid #1a1a1a;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading p, .no-data p, .no-user p {
+  font-family: 'Montserrat', sans-serif;
+  color: #505050;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.no-data, .no-user {
+  text-align: center;
+  padding: 3rem;
+}
+
+.no-data h3, .no-user h2 {
+  font-family: 'Playfair Display', serif;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .analytics-container {
+    padding: 1rem;
+  }
+  
+  .analytics-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .detailed-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .export-buttons {
+    flex-direction: column;
+  }
+  
+  .session-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .session-type {
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stat-value {
+    font-size: 2rem;
+  }
+}

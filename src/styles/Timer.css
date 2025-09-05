@@ -1,0 +1,221 @@
+/* Timer.css */
+.timer-display-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto;
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.current-task {
+  width: 80%;
+  margin: 0 0 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.task-display {
+  font-size: 1rem;
+  color: #505050;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-bottom: 1px dashed #ccc;
+  transition: all 0.3s ease;
+}
+
+.task-display:hover {
+  color: #1a1a1a;
+  border-bottom-color: #1a1a1a;
+}
+
+.task-input-container {
+  width: 100%;
+}
+
+.task-input {
+  width: 100%;
+  padding: 0.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 1px solid #1a1a1a;
+  background: transparent;
+  text-align: center;
+  outline: none;
+}
+
+/* Time display is now handled by the AnalogClock component */
+
+.timer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 450px;
+  margin-bottom: 1rem;
+}
+
+.timer-mode-selector {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-grow: 1;
+}
+
+.settings-button {
+  background: transparent;
+  border: 1px solid #1a1a1a;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Settings icon is now handled by the SettingsIcon component */
+
+.settings-button:hover {
+  background-color: rgba(26, 26, 26, 0.05);
+}
+
+.timer-mode-selector button {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid transparent;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.08rem;
+  color: #505050;
+  text-transform: uppercase;
+  padding: 0.4rem 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.timer-mode-selector button.mode-selected {
+  border-bottom: 1px solid #1a1a1a;
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+.timer-mode-selector button:hover {
+  color: #1a1a1a;
+}
+
+.timer-stats {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin-bottom: 1rem;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 0.7rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.session-counter, .focus-time-counter {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.1rem;
+  color: #505050;
+}
+
+.notification-popup {
+  position: absolute;
+  top: -60px;
+  background: #1a1a1a;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  animation: slide-down 0.3s ease-out;
+  z-index: 10;
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.timer-controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.timer-controls button {
+  background: transparent;
+  border: 1px solid #1a1a1a;
+  border-radius: 0;
+  padding: 0.6rem 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.timer-controls button.primary {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.timer-controls button.secondary {
+  background: transparent;
+  color: #1a1a1a;
+}
+
+.timer-controls button.tertiary {
+  background: transparent;
+  color: #1a1a1a;
+  border-color: #a0a0a0;
+}
+
+.timer-controls button.disabled {
+  background: #f0f0f0;
+  color: #a0a0a0;
+  border-color: #e0e0e0;
+  cursor: not-allowed;
+}
+
+.timer-controls button:not(.disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quote-container {
+  width: 80%;
+  margin: 0 0 1.5rem;
+  text-align: center;
+  animation: fade-in 1s ease-in;
+}
+
+.quote {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
