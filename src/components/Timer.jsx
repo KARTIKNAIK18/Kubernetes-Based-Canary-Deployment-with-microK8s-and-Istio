@@ -35,9 +35,53 @@ const Timer = () => {
   const [currentTask, setCurrentTask] = useState('');
   const [showTaskInput, setShowTaskInput] = useState(false);
   const [quote, setQuote] = useState('');
+<<<<<<< HEAD
   const intervalRef = useRef(null);
   const audioRef = useRef(null);
   
+=======
+  const [user, setUser] = useState(null);
+  const intervalRef = useRef(null);
+  const audioRef = useRef(null);
+  
+  // Check for logged-in user
+  useEffect(() => {
+    const savedUser = localStorage.getItem('user');
+    if (savedUser) {
+      setUser(JSON.parse(savedUser));
+    }
+  }, []);
+
+  // Track session for analytics
+  const trackSession = async (sessionData) => {
+    try {
+      const userId = user?.id || 'anonymous';
+      
+      await fetch('http://localhost:3003/api/analytics/session', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          userId,
+          sessionType: sessionData.type,
+          plannedDuration: sessionData.plannedDuration,
+          actualDuration: sessionData.actualDuration,
+          completed: sessionData.completed,
+          startTime: sessionData.startTime,
+          endTime: sessionData.endTime,
+          taskName: sessionData.taskName || '',
+          interruptions: sessionData.interruptions || 0,
+          notes: sessionData.notes || ''
+        }),
+      });
+    } catch (error) {
+      console.error('Failed to track session:', error);
+      // Don't show error to user - analytics is optional
+    }
+  };
+  
+>>>>>>> dev
   // Array of motivational quotes
   const quotes = [
     "Focus on being productive instead of busy.",
@@ -62,7 +106,27 @@ const Timer = () => {
 
   // Handle timer completion
   useEffect(() => {
+<<<<<<< HEAD
     if (secondsLeft === 0 && !isRunning) {
+=======
+    if (secondsLeft === 0 && !isRunning && sessionStartTime) {
+      // Track the completed session
+      const endTime = new Date();
+      const plannedDuration = settings.timers[timerMode] * 60;
+      const actualDuration = plannedDuration; // Full duration since it completed
+      
+      trackSession({
+        type: timerMode,
+        plannedDuration,
+        actualDuration,
+        completed: true,
+        startTime: sessionStartTime,
+        endTime,
+        taskName: currentTask,
+        interruptions: 0 // Could track this if needed
+      });
+
+>>>>>>> dev
       // Play sound notification if enabled
       if (settings.enableSounds && audioRef.current) {
         audioRef.current.play().catch(err => console.log('Audio play failed:', err));
@@ -80,9 +144,18 @@ const Timer = () => {
       } else {
         showNotification('Back to work!', 'POMODORO');
       }
+<<<<<<< HEAD
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [secondsLeft, isRunning]);
+=======
+
+      // Reset session start time
+      setSessionStartTime(null);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [secondsLeft, isRunning, sessionStartTime]);
+>>>>>>> dev
 
   // Set page title to show current timer
   useEffect(() => {
@@ -129,6 +202,15 @@ const Timer = () => {
   const startTimer = () => {
     if (!isRunning) {
       setIsRunning(true);
+<<<<<<< HEAD
+=======
+      
+      // Set session start time for tracking
+      if (!sessionStartTime) {
+        setSessionStartTime(new Date());
+      }
+      
+>>>>>>> dev
       intervalRef.current = setInterval(() => {
         setSecondsLeft((prev) => {
           const newValue = prev > 0 ? prev - 1 : 0;
@@ -162,6 +244,29 @@ const Timer = () => {
   };
 
   const resetTimer = () => {
+<<<<<<< HEAD
+=======
+    // Track incomplete session if there was a session in progress
+    if (sessionStartTime) {
+      const endTime = new Date();
+      const plannedDuration = settings.timers[timerMode] * 60;
+      const actualDuration = plannedDuration - secondsLeft;
+      
+      trackSession({
+        type: timerMode,
+        plannedDuration,
+        actualDuration,
+        completed: false,
+        startTime: sessionStartTime,
+        endTime,
+        taskName: currentTask,
+        interruptions: 1 // Reset counts as interruption
+      });
+      
+      setSessionStartTime(null);
+    }
+
+>>>>>>> dev
     setIsRunning(false);
     clearInterval(intervalRef.current);
     const resetValue = settings.timers[timerMode] * 60;
