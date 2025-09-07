@@ -18,12 +18,12 @@ spec:
             host: v1-service
             port:
               number: 80
-          weight: 100
+          weight: 80
         - destination:
             host: v2-service
             port:
               number: 80
-          weight: 0
+          weight: 20
 
     # SPA routes with canary split
     - match:
