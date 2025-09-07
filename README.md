@@ -30,7 +30,7 @@ This mirrors **real-world production rollouts**, where new features are introduc
 ## 📖 Deployment Flow
 
 <p align="center">
-  <img src="rsc/gif4.gif" width="600" alt="Kubernetes Deployment"/>
+  <img src="rsc/gif4.gif"  alt="Kubernetes Deployment"/>
 </p>
 
 ## 🚀 Features
