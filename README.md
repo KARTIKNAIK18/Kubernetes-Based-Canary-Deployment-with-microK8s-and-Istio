@@ -1,8 +1,5 @@
-
+[![Report](https://img.shields.io/badge/Project-Report-blue?style=flat&logo=read-the-docs)](canary-deployment-report.pdf)
 <h1 align="center">⏱️ Promodo Timer Canary Deployment</h1>
-[![Report](https://img.shields.io/badge/Project-Report-blue?style=flat&logo=read-the-docs)]
-<iframe src="canary-deployment-report.pdf" width="100%" height="600px"></iframe>
-<p align="center">
   <em>A cloud-native <b>Canary Deployment</b> simulation using <b>Kubernetes</b> and <b>Istio</b></em>  
 </p>
 <p align="center">
