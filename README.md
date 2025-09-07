@@ -3,6 +3,10 @@
 <h1 align="center">⏱️ Promodo Timer Canary Deployment</h1>
   <em>A cloud-native <b>Canary Deployment</b> simulation using <b>Kubernetes</b> and <b>Istio</b></em>  
 </p>
+
+## 📄 **Project Report**
+
+[Download Report (PDF)](canary-deployment-report.pdf)
 <p align="center">
   <img src="https://img.shields.io/badge/Kubernetes-1.27-blue?logo=kubernetes" />
   <img src="https://img.shields.io/badge/Istio-1.20-blue?logo=istio" />
