@@ -1,3 +1,5 @@
+#version 1
+
 FROM node:iron-alpine3.22 AS build
 
 WORKDIR /app

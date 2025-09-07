@@ -1,0 +1,42 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: promodo-vs
+  namespace: canary-dep
+spec:
+  hosts:
+    - "*"
+  gateways:
+    - istio-gateway
+  http:
+    # Serve /assets directly
+    - match:
+        - uri:
+            prefix: /assets/
+      route:
+        - destination:
+            host: v1-service
+            port:
+              number: 80
+          weight: 100
+        - destination:
+            host: v2-service
+            port:
+              number: 80
+          weight: 0
+
+    # SPA routes with canary split
+    - match:
+        - uri:
+            prefix: /
+      route:
+        - destination:
+            host: v1-service
+            port:
+              number: 80
+          weight: 80
+        - destination:
+            host: v2-service
+            port:
+              number: 80
+          weight: 20

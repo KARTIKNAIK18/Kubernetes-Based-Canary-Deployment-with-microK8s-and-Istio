@@ -6,7 +6,7 @@ const Footer = () => {
       <p className="footer-text">
         "The key is not to prioritize what's on your schedule, but to schedule your priorities."
       </p>
-      <p className="footer-author">— Stephen Covey</p>
+      <p className="footer-author">— By Stephen Covey</p>
     </footer>
   );
 };
