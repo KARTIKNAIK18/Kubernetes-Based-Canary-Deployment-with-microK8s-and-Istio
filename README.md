@@ -1,4 +1,5 @@
 <h1 align="center">⏱️ Promodo Timer Canary Deployment</h1>
+ <p align="center">
   <em>A cloud-native <b>Canary Deployment</b> simulation using <b>Kubernetes</b> and <b>Istio</b></em>  
 </p>
 
