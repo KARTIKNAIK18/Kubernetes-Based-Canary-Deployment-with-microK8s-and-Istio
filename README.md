@@ -4,7 +4,7 @@
 <p align="center">
   <em>A cloud-native <b>Canary Deployment</b> simulation using <b>Kubernetes</b> and <b>Istio</b></em>  
 </p>
-
+[![Report](https://img.shields.io/badge/Project-Report-blue?style=flat&logo=read-the-docs)](canary-deployment-report.pdf)
 <p align="center">
   <img src="https://img.shields.io/badge/Kubernetes-1.27-blue?logo=kubernetes" />
   <img src="https://img.shields.io/badge/Istio-1.20-blue?logo=istio" />
