@@ -124,30 +124,30 @@ Open the **External IP** in your browser 🎉
 
 ### 🔹 Istio Components
 <p align="center">
-  <img src="rsc/isito.png" width="600" alt="Istio Setup"/>
+  <img src="rsc/isito.png"  alt="Istio Setup"/>
 </p>
 
 ### 🔹 Gateway & Virtual Service
 <p align="center">
-  <img src="rsc/gateway.png" width="500" alt="Istio Gateway"/>
-  <img src="rsc/virtual service.png" width="500" alt="Istio VirtualService"/>
+  <img src="rsc/gateway.png"  alt="Istio Gateway"/>
+  <img src="rsc/virtual service.png" alt="Istio VirtualService"/>
 </p>
 
 ### 🔹 Kubernetes Deployments
 <p align="center">
-  <img src="rsc/deployment.png" width="600" alt="Kubernetes Deployment"/>
+  <img src="rsc/deployment.png" alt="Kubernetes Deployment"/>
 </p>
 
 ### 🔹 Application Demo
 
 #### 🟢 Version 1 (Stable – 80% Traffic)
 <p align="center">
-  <img src="rsc/application-v1.png" width="500" alt="Application Version 1"/>
+  <img src="rsc/application-v1.png"  alt="Application Version 1"/>
 </p>
 
 #### 🔵 Version 2 (Canary – 20% Traffic)
 <p align="center">
-  <img src="rsc/application-v2.png" width="500" alt="Application Version 2"/>
+  <img src="rsc/application-v2.png"  alt="Application Version 2"/>
 </p>
 
 
